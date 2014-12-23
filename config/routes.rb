@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root  'links#index'
 
   resources :links
+  resources :users, only: [:show, :index]
 
   get '/upvote/:id', to:'links#upvote', as: :upvote
   get '/downvote/:id', to:'links#downvote', as: :downvote

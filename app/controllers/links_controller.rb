@@ -48,7 +48,7 @@ class LinksController < ApplicationController
 
   def downvote
     @link = Link.find(params[:id])
-    @link.votes += 1
+    @link.votes -= 1
     @link.save
     redirect_to root_path
   end
