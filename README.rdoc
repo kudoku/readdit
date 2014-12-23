@@ -1,28 +1,22 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Not a reddit clone. 
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Now that's out of the way, here are the features of this link aggregator:
+* User submitted links which are sorted by descending votes on the home page
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
+Planned features:
+* Implement user login/validation system using devise
+* Twitter-like following users/links/categories
+* Pagination where needed
+* User customizable link feed
+* Admin/validation system
+* Restrict single user vote per link
+* Ability to post user assigned comment on links on a discussion page
+* Automatically archive old links into their set categories
+* Ability to login/share via social media
+* Forever styling and refactoring
+
+
