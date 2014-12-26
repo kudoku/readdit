@@ -8,4 +8,4 @@
 
 
 User.create(email: 'asdf@asdf.com', password: 'password', password_confirmation: 'password')
-# Link.create(title: 'Boring', url: 'https://www.google.com')
+Link.create(title: 'Boring', url: 'https://www.google.com', user_id: 1)

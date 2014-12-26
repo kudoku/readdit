@@ -1,7 +1,11 @@
 <h1>Links#show</h1>
 
-<%= @link.title %>
-<%= @link.url %>
-<%= @link.votes %>
+<p><%= @link.title %></p>
+<p><%= @link.url %></p>
+<p><%= @link.votes %></p>
 
 <%= link_to 'Back', root_path %>
+
+<h2>Comments</h2>
+
+<p><%= @link.comments %></p>
