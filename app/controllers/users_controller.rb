@@ -10,6 +10,14 @@ class UsersController < ApplicationController
     @user = current_user
   end
 
+  def destroy_avatar
+    @user = current_user
+    @user.avatar = nil
+    @user.save
+
+    redirect_to @user
+  end
+
 
 
 

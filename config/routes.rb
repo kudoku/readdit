@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   resources :links
   resources :users, only: [:show, :index]
 
+  get '/delete_avatar/:id', to:'users#destroy_avatar', as: :delete_avatar
+
   get '/upvote/:id', to:'links#upvote', as: :upvote
   get '/downvote/:id', to:'links#downvote', as: :downvote
 

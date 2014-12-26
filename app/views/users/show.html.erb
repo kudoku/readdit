@@ -10,7 +10,20 @@
 
   <!-- Tab panes -->
   <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="profile">Profile</div>
+    <div role="tabpanel" class="tab-pane active" id="profile">
+      <div class="container">
+        <h1>Profile</h1> 
+        <p><%= current_user.email %></p>
+        <p><%= current_user.username %></p>
+        <p><%= current_user.bio %></p>
+        <p><%= image_tag @user.avatar.url(:medium) %> <%= link_to 'Delete Avatar', delete_avatar_path(@user) %></p>
+        <p><%= image_tag @user.avatar.url(:thumb) %></p>
+      </div> 
+
+
+
+
+    </div>
     <div role="tabpanel" class="tab-pane" id="settings"><%= render :file => 'devise/registrations/edit.html.erb' %></div>
     <div role="tabpanel" class="tab-pane" id="feed">User Feed</div>
     <div role="tabpanel" class="tab-pane" id="settings">...</div>
