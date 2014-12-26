@@ -2,9 +2,9 @@
 
   <!-- Nav tabs -->
   <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation" class="active"><a href="#profile" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
-    <li role="presentation"><a href="#settings" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
-    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+    <li role="presentation" class="active"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+    <li role="presentation"><a href="#feed" aria-controls="feed" role="tab" data-toggle="tab">User Feed</a></li>
     <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
   </ul>
 
@@ -12,7 +12,7 @@
   <div class="tab-content">
     <div role="tabpanel" class="tab-pane active" id="profile">Profile</div>
     <div role="tabpanel" class="tab-pane" id="settings"><%= render :file => 'devise/registrations/edit.html.erb' %></div>
-    <div role="tabpanel" class="tab-pane" id="messages">...</div>
+    <div role="tabpanel" class="tab-pane" id="feed">User Feed</div>
     <div role="tabpanel" class="tab-pane" id="settings">...</div>
   </div>
 
