@@ -20,9 +20,12 @@ ActiveRecord::Schema.define(version: 20141226182433) do
     t.string   "title"
     t.string   "url"
     t.integer  "votes",      default: 0
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "links", ["user_id"], name: "index_links_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "",    null: false

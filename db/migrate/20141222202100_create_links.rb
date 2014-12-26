@@ -4,6 +4,7 @@ class CreateLinks < ActiveRecord::Migration
       t.string :title
       t.string :url
       t.integer :votes, default: 0
+      t.belongs_to :user, index:true
 
       t.timestamps
     end

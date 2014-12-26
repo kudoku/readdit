@@ -1,5 +1,6 @@
 class LinksController < ApplicationController
   before_action :set_link, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:create, :update, :destroy, :upvote, :downvote]
 
   def index
     @links = Link.order(votes: :desc)
@@ -13,7 +14,7 @@ class LinksController < ApplicationController
   end
 
   def create
-    @link = Link.new(link_params)
+    @link = current_user.links.build(link_params)
     @link.save
     if @link.save
       redirect_to @link
