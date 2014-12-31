@@ -3,10 +3,12 @@ Rails.application.routes.draw do
 
   root  'links#index'
 
+  resources :users, only: [:show, :index]
+
   resources :links do
     resources :comments, only: [:update, :destroy, :create]
   end
-  resources :users, only: [:show, :index]
+  
 
   get '/delete_avatar/:id', to:'users#destroy_avatar', as: :delete_avatar
 
