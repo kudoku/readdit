@@ -1,0 +1,22 @@
+
+<tr class="link">
+	<td class="width-fixed">
+		<%= link_to upvote_path(link.id), class: "btn btn-default" do %>
+		    <i class="glyphicon glyphicon-thumbs-up"></i>
+		<% end %>
+		
+		<%= link_to downvote_path(link.id), class: "btn btn-default pull-" do %>
+		    <i class="glyphicon glyphicon-thumbs-down"></i>
+		<% end %>
+		<%= link.votes %>
+		<div class="pull-right">
+		<%= link_to 'View', link_path(link) %> <%= link_to 'Edit', edit_link_path(link) %> <%= link_to 'Delete', link_path(link), method: :delete %>
+		</div>
+	</td>
+	<td class="width-variable">
+		<%= link.title %>
+	</td>
+	<td class="width-variable">
+		<a href=<%= link.url %>><%= link.url %></a> 
+	</td>
+</tr>

@@ -9,10 +9,10 @@
 		<%= link_to 'Add a new link', new_link_path, class: 'btn btn-primary btn-lg' %>
 	</div>
 </div>
-<%= paginate @links %>
+
 
 <div class='row'>
-	<table class="table table-hover" style="width: 100%">
+	<table id="links" class="table table-hover" style="width: 100%">
 		<thead>
 		<tr>
 			<th class="width-fixed">VOTES</th>
@@ -20,43 +20,22 @@
 			<th class="width-variable">URL</th>
 		</tr>
 		</thead>
-		<tbody>
 
-		<% @links.each do |link| %>
-			<div class="col-md-10 col-md-offset-1">
-				
-				<tr>
-					<td class="width-fixed">
-						<%= link_to upvote_path(link.id), class: "btn btn-default" do %>
-						    <i class="glyphicon glyphicon-thumbs-up"></i>
-						<% end %>
-						
-						<%= link_to downvote_path(link.id), class: "btn btn-default pull-" do %>
-						    <i class="glyphicon glyphicon-thumbs-down"></i>
-						<% end %>
-						<%= link.votes %>
-						<div class="pull-right">
-						<%= link_to 'View', link_path(link) %> <%= link_to 'Edit', edit_link_path(link) %> <%= link_to 'Delete', link_path(link), method: :delete %>
-						</div>
-					</td>
-					<td class="width-variable">
-						<%= link.title %>
-					</td>
-					<td class="width-variable">
-						<a href=<%= link.url %>><%= link.url %></a> 
-					</td>
-				</tr>
-				
-			</div>
-		<% end %>
+		<div class="col-md-10 col-md-offset-1">
+		<tbody class="page">
+
+			<%= render @links %>
+					
 		</tbody>
+		</div>
 	</table>
+	<%= paginate @links %>
 </div>
 
-<%= paginate @links %>
 
 
-<div class='row'>
+
+<!-- <div class='row'>
 	<h1> Welcome </h1>
 </div>
 <div class='row'>
@@ -109,3 +88,4 @@
 
 
 
+ -->
