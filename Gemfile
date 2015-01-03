@@ -18,7 +18,6 @@ gem 'bootstrap_form'
 gem 'devise'
 gem "acts_as_follower"
 gem "paperclip"
-gem 'will_paginate'
 gem 'kaminari'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

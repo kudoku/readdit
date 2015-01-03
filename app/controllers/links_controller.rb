@@ -3,7 +3,8 @@ class LinksController < ApplicationController
   before_action :authenticate_user!, only: [:create, :update, :destroy, :upvote, :downvote]
 
   def index
-    @links = Link.order(votes: :desc)
+    @links = Link.order(votes: :desc).page(params[:page])
+    
   end
 
   def show
