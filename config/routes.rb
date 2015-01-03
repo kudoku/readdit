@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   root  'links#index'
 
-  resources :users, only: [:show, :index]
+  resources :users, only: [:show, :index, :update]
 
   resources :links do
     resources :comments, only: [:update, :destroy, :create]

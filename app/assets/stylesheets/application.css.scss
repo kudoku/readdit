@@ -20,3 +20,30 @@
 .text-align-center {
 	text-align: center;
 }
+
+
+.title-box {
+	overflow: hidden;
+	width: 60%
+}
+
+.url-box {
+	overflow: hidden;
+	width: 40%
+}
+
+.width-fixed {
+    width: 280px;
+}
+
+table{
+    table-layout: fixed;
+    max-width: 100%;
+}
+
+.width-variable {
+    overflow: hidden;
+    width: auto;
+    white-space: nowrap;
+
+}

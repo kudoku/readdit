@@ -10,6 +10,13 @@ class UsersController < ApplicationController
     @user = current_user
   end
 
+  def update
+    @user = current_user
+    @user.update_attributes(user_params)
+
+    redirect_to user_path(@user)
+  end
+
   def destroy_avatar
     @user = current_user
     @user.avatar = nil
@@ -18,6 +25,10 @@ class UsersController < ApplicationController
     redirect_to @user
   end
 
+  private
+    def user_params
+      params.require(:user).permit(:bio, :name, :avatar)
+    end
 
 
 

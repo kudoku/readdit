@@ -1,22 +1,22 @@
 <div class='row'>
 	<div class='col-md-6 col-md-offset-3'>
-		<h1 class="text-align-center">Links#index</h1>
+		<h1 class="text-align-center">Trending Links</h1>
 	</div>
 </div>
 
 <div class='row'>
-	<div class='col-md-6 col-md-offset-3'>
+	<div class='col-md-6 col-md-offset-3 text-align-center'>
 		<%= link_to 'Add a new link', new_link_path, class: 'btn btn-primary btn-lg' %>
 	</div>
 </div>
 
 <div class='row'>
-	<table class="table table-hover">
+	<table class="table table-hover" style="width: 100%">
 		<thead>
 		<tr>
-			<th>VOTES</th>
-			<th>TITLE</th>
-			<th>URL</th>
+			<th class="width-fixed">VOTES</th>
+			<th class="width-variable">TITLE</th>
+			<th class="width-variable">URL</th>
 		</tr>
 		</thead>
 		<tbody>
@@ -24,20 +24,24 @@
 			<div class="col-md-10 col-md-offset-1">
 				
 				<tr>
-					<td>
+					<td class="width-fixed">
 						<%= link_to upvote_path(link.id), class: "btn btn-default" do %>
 						    <i class="glyphicon glyphicon-thumbs-up"></i>
 						<% end %>
-						<%= link.votes %>
-						<%= link_to downvote_path(link.id), class: "btn btn-default" do %>
+						
+						<%= link_to downvote_path(link.id), class: "btn btn-default pull-" do %>
 						    <i class="glyphicon glyphicon-thumbs-down"></i>
 						<% end %>
+						<%= link.votes %>
+						<div class="pull-right">
+						<%= link_to 'View', link_path(link) %> <%= link_to 'Edit', edit_link_path(link) %> <%= link_to 'Delete', link_path(link), method: :delete %>
+						</div>
 					</td>
-					<td>
-						<%= link.title %> <%= link_to 'View', link_path(link) %> <%= link_to 'Edit', edit_link_path(link) %> <%= link_to 'Delete', link_path(link), method: :delete %>
+					<td class="width-variable">
+						<%= link.title %>
 					</td>
-					<td>
-						<%= link.url %>
+					<td class="width-variable">
+						<a href=<%= link.url %>><%= link.url %></a> 
 					</td>
 				</tr>
 				

@@ -18,6 +18,8 @@ gem 'bootstrap_form'
 gem 'devise'
 gem "acts_as_follower"
 gem "paperclip"
+gem 'will_paginate'
+gem 'kaminari'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
