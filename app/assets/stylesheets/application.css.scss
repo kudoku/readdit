@@ -17,8 +17,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-.text-align-center {
+.center-text {
 	text-align: center;
+}
+
+.center {
+    margin: 0 auto;
 }
 
 
