@@ -1,10 +1,16 @@
 <p><%= current_user.email %></p>
 <p><%= current_user.username %></p>
 <p><%= current_user.bio %></p>
-<% if current_user.avatar_file_size != nil %>
-  <p><%= image_tag @user.avatar.url(:medium) %> <%= link_to 'Delete Avatar', delete_avatar_path(current_user) %></p>
+
+  <p><%= image_tag @user.avatar.url(:medium) %> 
+  <% if current_user.avatar_file_size != nil %>
+    <%= link_to 'Delete Avatar', delete_avatar_path(current_user) %>
+  <% end %></p>
   <p><%= image_tag current_user.avatar.url(:thumb) %></p>
-<% end %>  
+
+  <img src="assets/images/default.png">
+  <img src=<%= image_path('default.png') %>> 
+
 <div class="form-group">
   <%= form_for current_user, method: :patch do |f| %>
     <%= f.label :name %>

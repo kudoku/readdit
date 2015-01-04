@@ -5,6 +5,9 @@ class Link < ActiveRecord::Base
   # attr_accessor :title, :url
   before_save :sanitize_url
 
+  validates :title, presence: true
+  validates :url, presence: true
+
   private 
   def sanitize_url
     unless self.url[/\Ahttp:\/\//] || self.url[/\Ahttps:\/\//]

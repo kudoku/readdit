@@ -4,19 +4,19 @@ Not a reddit clone.
 
 Now that's out of the way, here are the features of this link aggregator:
 * User submitted links which are sorted by descending votes on the home page
-
+* Implement user login/validation system using devise
+* Pagination where needed
+* Ability to post user assigned comment on links on a discussion page
 
 
 Planned features:
-* Implement user login/validation system using devise
 * Twitter-like following users/links/categories
-* Pagination where needed
 * User customizable link feed
 * Admin/validation system
 * Restrict single user vote per link
-* Ability to post user assigned comment on links on a discussion page
 * Automatically archive old links into their set categories
 * Ability to login/share via social media
+* Possibly integrate disqus/gravatar
 * Forever styling and refactoring
 
 
