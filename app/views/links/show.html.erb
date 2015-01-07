@@ -1,8 +1,8 @@
-<h1>Links#show</h1>
+<h1><%= @link.title %></h1>
 
-<p><%= @link.title %></p>
 <p><%= @link.url %></p>
 <p><%= @link.votes %></p>
+<p><%= @link.content %></p>
 
 <%= link_to 'Back', root_path %>
 
@@ -20,6 +20,29 @@
 <%= link_to 'New Comment', link_comments_path(@link.id), method: :post %>
 
 <% @link.comments.each do |comment| %>
-	<p><%= comment.title %> <%= link_to 'Delete', link_comment_path(@link.id, comment.id), method: :delete  %></p>
-	<p><%= comment.content %></p>
+	<% i = 1 %>
+
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Panel heading</div>
+  <div class="panel-body">
+    <p>...</p>
+  </div>
+
+  <!-- List group -->
+  <ul class="list-group">
+    <li class="list-group-item"><p><%= comment.content %> <span class="pull-right"><%= link_to 'Delete', link_comment_path(@link.id, comment.id), method: :delete  %></span></p></li>
+  </ul>
+</div>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title"><p><%= comment.title %> 	</p></h3>
+  </div>
+  <div class="panel-body">
+    <p><%= comment.content %> <span class="pull-right"><%= link_to 'Delete', link_comment_path(@link.id, comment.id), method: :delete  %></span></p>
+  </div>
+</div>
+	<% i += 1 %>
 <% end %>

@@ -1,8 +1,5 @@
 class RegistrationsController < Devise::RegistrationsController
-  def update
-    # @user.save
-    redirect_to @user
-  end
+
 
   private
     def sign_up_params

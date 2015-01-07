@@ -24,7 +24,7 @@
 
 
     </div>
-    <div role="tabpanel" class="tab-pane" id="settings"><%= render :file => 'devise/registrations/edit.html.erb' %></div>
+    <div role="tabpanel" class="tab-pane" id="settings"><%= render :template => 'devise/registrations/edit.html.erb', locals: {resource: current_user} %></div>
     <div role="tabpanel" class="tab-pane" id="feed">User Feed</div>
     <div role="tabpanel" class="tab-pane" id="control_panel">Control Panel</div>
   </div>
